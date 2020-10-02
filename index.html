@@ -121,7 +121,10 @@
 						if (this.mmm == 'wow') {
 							this.s2step = this.s1step
 						}
-						else if (this.mmm == 'bad' && this.s2step == this.s1step){
+						else if (this.mmm == 'bad' && this.s2step%7 == this.s1step%7){
+							this.s2step++
+						}
+						else if (this.mmm == 'luck' && this.s2step%7 == this.s1step%7){
 							this.s2step++
 						}
 					},ts2)
@@ -135,7 +138,7 @@
 						if (this.mmm != 'normal') {
 							this.s3step = this.s2step
 						}
-						if (this.mmm == 'bad' && this.s3step == this.s2step){
+						if (this.mmm == 'bad' && this.s3step%7 == this.s2step%7){
 							this.s3step++
 						}
 
